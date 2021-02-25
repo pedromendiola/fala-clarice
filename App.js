@@ -7,8 +7,8 @@ import * as Speech from 'expo-speech'
 
 export default function App() {
 
-  const [falando,setFalando] = useState(false)
-  
+  const [falando, setFalando] = useState(false)
+
   let frases = [
     "Até cortar os próprios defeitos pode ser perigoso. Nunca se sabe qual é o defeito que sustenta nosso edifício inteiro.",
     "Que ninguém se engane, só se consegue a simplicidade através de muito trabalho.",
@@ -49,7 +49,7 @@ export default function App() {
         </Text>
       <Image source={clarice} style={styles.Imagem} />
 
-      {falando && <ActivityIndicator size="large" color="#00FF00"/>}
+      {falando && <ActivityIndicator size="large" color="#00FF00" />}
 
       <FontAwesome.Button
         name="volume-up"
@@ -59,7 +59,7 @@ export default function App() {
       </FontAwesome.Button>
       <FontAwesome.Button
         name="stop-circle"
-        backgroundColor={!falando ?"#cccccc":"#d9534f"}
+        backgroundColor={!falando ? "#cccccc" : "#d9534f"}
         disable={!falando}
         onPress={parar}
         style={styles.Botao}>Parar
